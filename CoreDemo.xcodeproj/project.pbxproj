@@ -14,6 +14,10 @@
 		48CD948921A16D7A00B40D90 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48CD948721A16D7A00B40D90 /* LaunchScreen.storyboard */; };
 		48CD949421A16D7A00B40D90 /* CoreDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CD949321A16D7A00B40D90 /* CoreDemoTests.swift */; };
 		48CD949F21A16D7A00B40D90 /* CoreDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CD949E21A16D7A00B40D90 /* CoreDemoUITests.swift */; };
+		48CD94B121A19AA200B40D90 /* Mood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CD94B021A19AA200B40D90 /* Mood.swift */; };
+		48CD94B421A1A46C00B40D90 /* Moody.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 48CD94B221A1A46C00B40D90 /* Moody.xcdatamodeld */; };
+		48CD94B621A1A8A000B40D90 /* MoodyStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CD94B521A1A8A000B40D90 /* MoodyStack.swift */; };
+		48CD94B921A1B68C00B40D90 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CD94B821A1B68C00B40D90 /* RootViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,10 @@
 		48CD949A21A16D7A00B40D90 /* CoreDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		48CD949E21A16D7A00B40D90 /* CoreDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDemoUITests.swift; sourceTree = "<group>"; };
 		48CD94A021A16D7A00B40D90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		48CD94B021A19AA200B40D90 /* Mood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mood.swift; sourceTree = "<group>"; };
+		48CD94B321A1A46C00B40D90 /* Moody.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Moody.xcdatamodel; sourceTree = "<group>"; };
+		48CD94B521A1A8A000B40D90 /* MoodyStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodyStack.swift; sourceTree = "<group>"; };
+		48CD94B821A1B68C00B40D90 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +105,8 @@
 		48CD947D21A16D7800B40D90 /* CoreDemo */ = {
 			isa = PBXGroup;
 			children = (
+				48CD94B721A1B64700B40D90 /* View Controllers */,
+				48CD94AC21A190AE00B40D90 /* Model */,
 				48CD947E21A16D7800B40D90 /* AppDelegate.swift */,
 				48CD948021A16D7800B40D90 /* ViewController.swift */,
 				48CD948221A16D7800B40D90 /* Main.storyboard */,
@@ -123,6 +133,24 @@
 				48CD94A021A16D7A00B40D90 /* Info.plist */,
 			);
 			path = CoreDemoUITests;
+			sourceTree = "<group>";
+		};
+		48CD94AC21A190AE00B40D90 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				48CD94B021A19AA200B40D90 /* Mood.swift */,
+				48CD94B521A1A8A000B40D90 /* MoodyStack.swift */,
+				48CD94B221A1A46C00B40D90 /* Moody.xcdatamodeld */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		48CD94B721A1B64700B40D90 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				48CD94B821A1B68C00B40D90 /* RootViewController.swift */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,8 +284,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48CD94B121A19AA200B40D90 /* Mood.swift in Sources */,
 				48CD948121A16D7800B40D90 /* ViewController.swift in Sources */,
+				48CD94B921A1B68C00B40D90 /* RootViewController.swift in Sources */,
+				48CD94B421A1A46C00B40D90 /* Moody.xcdatamodeld in Sources */,
 				48CD947F21A16D7800B40D90 /* AppDelegate.swift in Sources */,
+				48CD94B621A1A8A000B40D90 /* MoodyStack.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -580,6 +612,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		48CD94B221A1A46C00B40D90 /* Moody.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				48CD94B321A1A46C00B40D90 /* Moody.xcdatamodel */,
+			);
+			currentVersion = 48CD94B321A1A46C00B40D90 /* Moody.xcdatamodel */;
+			path = Moody.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 48CD947321A16D7800B40D90 /* Project object */;
 }

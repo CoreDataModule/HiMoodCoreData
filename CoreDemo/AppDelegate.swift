@@ -7,15 +7,26 @@
 //
 
 import UIKit
+import CoreData
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 	var window: UIWindow?
-
+	var persistentContainer: NSPersistentContainer!
 
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 		// Override point for customization after application launch.
+		//我们在这个地方创建
+		createMoodyContainer { (container) in
+			self.persistentContainer = container
+			let storyBoard = self.window?.rootViewController?.storyboard
+			guard let vc = storyBoard?.instantiateViewController(withIdentifier: "RootViewController") as? RootViewController else {
+				fatalError("can't initial rootviewcontroller")
+			}
+			vc.manageObjectContext = container.viewContext
+			self.window?.rootViewController = vc
+		}
 		return true
 	}
 
