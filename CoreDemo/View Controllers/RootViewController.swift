@@ -14,7 +14,7 @@ class RootViewController: UIViewController {
 	
 	var manageObjectContext: NSManagedObjectContext!
 	override func viewDidLoad() {
-		self.view.backgroundColor = UIColor.red
+		print(NSSearchPathForDirectoriesInDomains(.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true))
 	}
 	
 }
