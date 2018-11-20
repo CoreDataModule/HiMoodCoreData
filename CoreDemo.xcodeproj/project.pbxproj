@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		48A15ADC21A4491F00601C6E /* MoodsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A15ADB21A4491F00601C6E /* MoodsTableViewController.swift */; };
 		48A15ADE21A44FB800601C6E /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A15ADD21A44FB800601C6E /* CameraViewController.swift */; };
+		48A15AE121A4548200601C6E /* SegueHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A15AE021A4548200601C6E /* SegueHelper.swift */; };
 		48CD947F21A16D7800B40D90 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CD947E21A16D7800B40D90 /* AppDelegate.swift */; };
 		48CD948121A16D7800B40D90 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CD948021A16D7800B40D90 /* ViewController.swift */; };
 		48CD948421A16D7800B40D90 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48CD948221A16D7800B40D90 /* Main.storyboard */; };
@@ -42,6 +43,7 @@
 /* Begin PBXFileReference section */
 		48A15ADB21A4491F00601C6E /* MoodsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodsTableViewController.swift; sourceTree = "<group>"; };
 		48A15ADD21A44FB800601C6E /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		48A15AE021A4548200601C6E /* SegueHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueHelper.swift; sourceTree = "<group>"; };
 		48CD947B21A16D7800B40D90 /* CoreDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48CD947E21A16D7800B40D90 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		48CD948021A16D7800B40D90 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -86,6 +88,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		48A15ADF21A4546B00601C6E /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				48A15AE021A4548200601C6E /* SegueHelper.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		48CD947221A16D7800B40D90 = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +119,7 @@
 		48CD947D21A16D7800B40D90 /* CoreDemo */ = {
 			isa = PBXGroup;
 			children = (
+				48A15ADF21A4546B00601C6E /* Helper */,
 				48CD94B721A1B64700B40D90 /* View Controllers */,
 				48CD94AC21A190AE00B40D90 /* Model */,
 				48CD947E21A16D7800B40D90 /* AppDelegate.swift */,
@@ -296,6 +307,7 @@
 				48CD94B921A1B68C00B40D90 /* RootViewController.swift in Sources */,
 				48CD94B421A1A46C00B40D90 /* Moody.xcdatamodeld in Sources */,
 				48A15ADE21A44FB800601C6E /* CameraViewController.swift in Sources */,
+				48A15AE121A4548200601C6E /* SegueHelper.swift in Sources */,
 				48CD947F21A16D7800B40D90 /* AppDelegate.swift in Sources */,
 				48CD94B621A1A8A000B40D90 /* MoodyStack.swift in Sources */,
 			);

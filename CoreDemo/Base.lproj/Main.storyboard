@@ -39,14 +39,14 @@
                                     <constraint firstAttribute="height" constant="432" id="F7b-GN-287"/>
                                 </constraints>
                                 <connections>
-                                    <segue destination="yBb-jJ-YjR" kind="embed" id="VB0-Au-EL7"/>
+                                    <segue destination="yBb-jJ-YjR" kind="embed" identifier="embedMoodTable" id="VB0-Au-EL7"/>
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WUl-n0-NAP">
                                 <rect key="frame" x="0.0" y="495" width="375" height="172"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                 <connections>
-                                    <segue destination="sjg-l2-hZQ" kind="embed" id="Xiv-hl-eFq"/>
+                                    <segue destination="sjg-l2-hZQ" kind="embed" identifier="embedCamera" id="Xiv-hl-eFq"/>
                                 </connections>
                             </containerView>
                         </subviews>
