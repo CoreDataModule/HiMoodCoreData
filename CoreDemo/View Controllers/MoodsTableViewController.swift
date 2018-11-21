@@ -8,17 +8,49 @@
 
 import Foundation
 import UIKit
+import CoreData
 
-class MoodsTableViewController: UITableViewController {
+class MoodsTableViewController: UITableViewController ,SegueHelper{
+	
+	enum SegueIdentifier: String {
+		case showMoodDetail = "showMoodDetail"
+	}
+	
+	var manageObjectContext: NSManagedObjectContext!
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
+		setupTableView()
 	}
 	
-	func setupTableView()  {
+	//for navigate to next flow
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		switch segueIdentifier(for: segue) {
+		case .showMoodDetail:
+			print("done")
+		}
+	}
+	
+	//private
+//	fileprivate var dataSource: TableViewDataSource<MoodsTableViewController>!
+	fileprivate var observer: ManagedObjectObserver?
+	
+	fileprivate func setupTableView()  {
 		tableView.rowHeight = UITableView.automaticDimension
 		tableView.estimatedRowHeight = 100
-//		let request
+		let request = Mood.fetchRequest()
+		request.fetchBatchSize = 20
+		request.returnsObjectsAsFaults = false
+		let sort: NSSortDescriptor = NSSortDescriptor(key: "date", ascending: true)
+		request.sortDescriptors = [sort]
+		let fetchRequestController = NSFetchedResultsController.init(fetchRequest: request, managedObjectContext: manageObjectContext, sectionNameKeyPath: nil, cacheName: nil)
+		
 	}
-	
 }
+
+//extension MoodsTableViewController: TableViewDataSourceDelegate {
+//
+//	func configure(_ cell: MoodsTableViewController.Cell, for object: MoodsTableViewController.Object) {
+//
+//	}
+//}

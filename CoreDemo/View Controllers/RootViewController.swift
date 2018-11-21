@@ -28,6 +28,7 @@ class RootViewController: UIViewController, SegueHelper {
 			guard let nc = segue.destination as? UINavigationController, let vc = nc.viewControllers.first as? MoodsTableViewController else {
 				fatalError("unkown vc")
 			}
+			vc.manageObjectContext = manageObjectContext
 			
 		case .embedCamera:
 			guard let camera = segue.destination as? CameraViewController else {
